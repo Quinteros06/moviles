@@ -24,9 +24,9 @@ class secundario : AppCompatActivity() {
         btncompartir = findViewById(R.id.btncompartir)
 
 
-        val name = intent.getStringExtra("Nombre".toString())
-        val mail = intent.getStringExtra("Correo electronico".toString())
-        val number = intent.getStringExtra("Numero".toString())
+        val name = intent.getStringExtra("name").toString()
+        val mail = intent.getStringExtra("Email").toString()
+        val number = intent.getStringExtra("Número").toString()
 
         placeholdername.text = name
         placeholderemail.text = mail
@@ -40,7 +40,7 @@ class secundario : AppCompatActivity() {
         var text = placeholdername.text.toString() + "\n"+placeholderemail.text.toString() + "\n"+placeholdernumber.text.toString()
         btncompartir.setOnClickListener{
             val shareIntent = Intent(Intent.ACTION_SEND)
-            shareIntent.type = "texto"
+            shareIntent.type = "text/plain"
             shareIntent.putExtra(Intent.EXTRA_TEXT,  text)
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "text")
             startActivity(Intent.createChooser(shareIntent, "text"))
