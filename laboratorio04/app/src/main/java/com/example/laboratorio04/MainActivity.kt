@@ -24,7 +24,11 @@ class MainActivity : AppCompatActivity() {
         editTextEmail = findViewById(R.id.emaill)
         editTextNumer = findViewById(R.id.numeroo)
 
-        buttonsave.setOnClickListener{
+        guardar()
+    }
+
+    private fun guardar(){
+        findViewById<Button>(R.id.buttonsave).setOnClickListener{
             val intent = Intent(this, secundario:: class.java)
             intent.putExtra("name", editTextName.text)
             intent.putExtra("Email", editTextEmail.text)
@@ -32,4 +36,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

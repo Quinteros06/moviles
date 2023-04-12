@@ -11,4 +11,9 @@
     <string name="nombree">nombre</string>
     <string name="compartir">COMPARTIR</string>
     <string name="guardar">GUARDAR</string>
+    <string name="confirmar">Confirmar tu informacion</string>
+    <string name="nombre2">Nombre</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="n_mero_telefonico">Número telefonico</string>
+    <string name="compartir1">Compartir</string>
 </resources>
