@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundLayout"
+    tools:context=".terceroFragment" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/new_movie"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="359dp"
+        android:layout_height="61dp"
+        android:background="@color/cardLayout"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#F3F3F3"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="157dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="356dp"
+        android:layout_height="66dp"
+        android:background="@color/cardLayout"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Cartegory"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="237dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="356dp"
+        android:layout_height="66dp"
+        android:background="@color/cardLayout"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Description"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="332dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="356dp"
+        android:layout_height="66dp"
+        android:background="@color/cardLayout"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Calification"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="420dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

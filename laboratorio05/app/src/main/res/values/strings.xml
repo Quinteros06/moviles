@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">laboratorio-05</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="star_wars_episodio_3_la_venganza_de_los_sith">Star Wars episodio 3: La venganza de los Sith</string>
+    <string name="ciencia_ficcion">Ciencia Ficcion</string>
+    <string name="_9_8">9.8</string>
+    <string name="la_nave_en_la_que_viaja_la_princesa_leia_es_capturada_por_las_tropas_imperiales_al_mando_del_temible_darth_vader_antes_de_ser_atrapada_leia_consigue_introducir_un_mensaje_en_su_robot_r2_d2_quien_acompa_ado_de_su_inseparable_c_3po_logran_escapar">La nave en la que viaja la princesa Leia es capturada por las tropas imperiales al mando del temible Darth Vader. Antes de ser atrapada, Leia consigue introducir un mensaje en su robot R2-D2, quien acompañado de su inseparable C-3PO logran escapar.</string>
+    <string name="star_wars_episodio_3_n_la_venganza_de_los_sith">Star Wars episodio 3:\n La venganza de los Sith</string>
+    <string name="_9_8s">9.8</string>
+    <string name="billboard">Billboard</string>
+    <string name="new_movie">New movie</string>
+</resources>
