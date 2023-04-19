@@ -10,4 +10,10 @@
     <string name="_9_8s">9.8</string>
     <string name="billboard">Billboard</string>
     <string name="new_movie">New movie</string>
+    <string name="new_movie4">New Movie</string>
+    <string name="submit">Submit</string>
+    <string name="calification">Calification</string>
+    <string name="description">Description</string>
+    <string name="category">Category</string>
+    <string name="name">Name</string>
 </resources>
