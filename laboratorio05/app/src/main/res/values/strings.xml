@@ -16,4 +16,8 @@
     <string name="description">Description</string>
     <string name="category">Category</string>
     <string name="name">Name</string>
+    <string name="billboardx">Billboard</string>
+    <string name="star_wars_episodio_3">Star Wars episodio 3:</string>
+    <string name="la_venganza_de_los_sith">La venganza de los Sith</string>
+    <string name="_9_87">9.8</string>
 </resources>

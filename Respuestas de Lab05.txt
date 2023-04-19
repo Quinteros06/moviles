@@ -1,0 +1,15 @@
+1-¿Qué diferencia existe entre navegar dentro de la aplicación utilizando
+Navigation Component o hacer uso de intents?
+    -Navigation Component es una biblioteca de Android que permite la navegación entre diferentes destinos de manera más fácil, los intents son mensajes que se utilizan para
+     iniciar una actividad o servicio dentro de la aplicación.
+
+2- Menciona los componentes fundamentales de Navigation
+Component.
+    -Navigation Graph
+    -NavHost
+    -NavController
+
+3- Mencione algunas de las ventajas del Navigation Graph
+  - Forma estructurada de definir la navegación de la aplicación
+  - Separación de la lógica de navegación de la lógica de negocios
+  - Facilitar el proceso para crear aplicaciones más robustas y escalables.
