@@ -1,0 +1,7 @@
+1. ¿En qué consiste el patrón de diseño Repository?
+ -El patrón de diseño Repository es un patrón de arquitectura de software que se utiliza para separar la lógica de negocio
+  de la lógica de acceso a los datos en una aplicación.
+
+2. ¿Qué es el ViewModel? 
+ -El ViewModel es responsable de proporcionar los datos necesarios a la vista y de realizar las operaciones necesarias para
+  que la vista se actualice en función de los cambios realizados en el modelo de datos.
