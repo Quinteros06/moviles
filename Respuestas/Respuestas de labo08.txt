@@ -1,0 +1,10 @@
+1. ¿Cuál es la principal ventaja de utilizar Recycler View?
+-La principal ventaja de utilizar Recycler View en el desarrollo de aplicaciones móviles para Android es que es una vista optimizada y eficiente para mostrar grandes conjuntos de datos. A diferencia de la vista de lista (ListView) más antigua, Recycler View utiliza un enfoque de "reciclaje" de vistas para reutilizar y actualizar elementos de la interfaz de usuario a medida que el usuario desplaza la pantalla, lo que permite un mejor rendimiento y ahorro de recursos.
+
+2. Menciona los componentes de RecyclerView y la función que tiene
+cada uno de ellos
+-Layout Manager.
+-ViewHolder.
+-Item Animator.
+-Item Decoration.
+-Adapter.
