@@ -11,7 +11,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.laboratorio11.R
-import com.example.laboratorio11.RetrofitApplication
 import com.example.laboratorio11.databinding.FragmentRegisterBinding
 import com.example.laboratorio11.ui.login.LoginUiStatus
 import com.example.laboratorio11.ui.register.viewmodel.RegisterViewModel
@@ -26,10 +25,6 @@ class RegisterFragment : Fragment() {
 
     private lateinit var binding: FragmentRegisterBinding
 
-    val app by lazy {
-        requireActivity().application as RetrofitApplication
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,31 +38,10 @@ class RegisterFragment : Fragment() {
 
         setViewModel()
         observeStatus()
-
         binding.registerBtn.setOnClickListener {
-            registerViewModel.onRegister()
-        }
-
-    }
-
-    private fun handleUiStatus( status: RegisterUiStatus){
-        when(status){
-            is RegisterUiStatus.Error ->{
-                Toast.makeText(requireContext(), "An error has occurred", Toast.LENGTH_SHORT).show()
-            }
-            is RegisterUiStatus.ErrorWithMessage ->{
-                Toast.makeText(requireContext(), status.message, Toast.LENGTH_SHORT).show()
-            }
-            is RegisterUiStatus.Success ->{
-                registerViewModel.clearStatus()
-                registerViewModel.clearData()
-                Toast.makeText(requireContext(), "Cualquier cosa", Toast.LENGTH_SHORT).show()
-                findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
-            }
-            else -> {}
+            it.findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
     }
-
     private fun setViewModel() {
         binding.viewmodel = registerViewModel
     }
@@ -75,6 +49,22 @@ class RegisterFragment : Fragment() {
     private fun observeStatus() {
         registerViewModel.status.observe(viewLifecycleOwner) { status ->
             handleUiStatus(status)
+        }
+    }
+    private fun handleUiStatus(status: RegisterUiStatus){
+        when(status){
+            is RegisterUiStatus.Error -> {
+                Toast.makeText(requireContext(), "An error has occurred", Toast.LENGTH_SHORT).show()
+            }
+            is RegisterUiStatus.ErrorWithMessage -> {
+                Toast.makeText(requireContext(), status.message, Toast.LENGTH_SHORT).show()
+            }
+            is RegisterUiStatus.Success -> {
+                registerViewModel.clearStatus()
+                registerViewModel.clearData()
+                findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+            }
+            else -> {}
         }
     }
 }

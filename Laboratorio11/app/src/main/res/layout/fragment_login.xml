@@ -12,6 +12,16 @@
         android:layout_height="match_parent"
         tools:context=".ui.login.LoginFragment">
 
+        <!--<ImageView
+            android:id="@+id/loginIcon"
+            android:layout_width="@dimen/image_dim"
+            android:layout_height="@dimen/image_dim"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/starawars"
+            app:layout_constraintBottom_toTopOf="@+id/emailEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />-->
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailEditText"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -26,6 +36,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
@@ -47,6 +58,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"

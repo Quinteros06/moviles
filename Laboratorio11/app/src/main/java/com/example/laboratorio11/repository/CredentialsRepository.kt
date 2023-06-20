@@ -9,31 +9,29 @@ import java.io.IOException
 
 class CredentialsRepository(private val api: AuthService) {
 
-    // TODO: Create a function to login using the AuthService and return an ApiResponse
     suspend fun login(email: String, password: String): ApiResponse<String>{
         try {
-            val response = api.login(LoginRequest(email, password))
+            val response = api.login(LoginRequest(email,password))
             return ApiResponse.Success(response.token)
-        } catch (e:HttpException){
-            if(e.code()==400){
-                return ApiResponse.ErrorWithMessage("Invalid email or password")
-            }
+        }
+        catch (e: HttpException){
+            if(e.code() == 400)
+                return ApiResponse.ErrorWithMessage("Invalid Email or Password")
             return ApiResponse.Error(e)
         } catch (e: IOException){
             return ApiResponse.Error(e)
         }
     }
-    // TODO: Create a function to register using the AuthService and return an ApiResponse
-    suspend fun register(name: String, email: String, password: String): ApiResponse<String>{
-        return try {
+
+    suspend fun register(name: String, email: String, password: String): ApiResponse<String> {
+        try {
             val response = api.register(RegisterRequest(name, email, password))
-            ApiResponse.Success(response.message)
-        } catch (e:HttpException){
-            if(e.code()==400){
-                return ApiResponse.ErrorWithMessage("Something went wrong")
-            }
+            return ApiResponse.Success(response.message)
+        }catch (e: HttpException){
+            if(e.code() == 401)
+                return ApiResponse.ErrorWithMessage("Conflict with the credentials")
             return ApiResponse.Error(e)
-        } catch (e: IOException){
+        }catch (e: IOException){
             return ApiResponse.Error(e)
         }
     }
